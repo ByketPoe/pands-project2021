@@ -1,0 +1,3 @@
+Notes
+
+I have two files, one with a bunch of numbers, the other with info on those numbers. Saving the info as a text file, the numbers as a CSV
