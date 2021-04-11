@@ -16,4 +16,4 @@ column_names = ['Sepal Length (cm)', 'Sepal Width (cm)', 'Petal Length (cm)', 'P
 iris_data_frame = pd.read_csv("../irisdata.csv", names = column_names)
 #iris_data_frame.columns = 
 
-print(iris_data_frame)
+print(iris_data_frame.describe())
