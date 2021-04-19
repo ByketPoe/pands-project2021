@@ -11,6 +11,8 @@
 
 import pandas as pd 
 
+# Split classes into different files
+
 column_names = ['Sepal Length (cm)', 'Sepal Width (cm)', 'Petal Length (cm)', 'Petal Width (cm)', 'Class']
 
 iris_data_frame = pd.read_csv("../irisdata.csv", names = column_names)
