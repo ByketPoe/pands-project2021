@@ -1,3 +1,13 @@
 Notes
 
 I have two files, one with a bunch of numbers, the other with info on those numbers. Saving the info as a text file, the numbers as a CSV
+Need to sort out the files; need headers on the lists of data, also might be useful to separate out the three groups into different files? 
+Use pandas dataframes for the data
+
+Plotting
+Histogram
+Box Plots 
+Bean Plots
+Scatter - Correlation
+Parallel coordinate plot
+3d plots?
