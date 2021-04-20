@@ -10,6 +10,8 @@
 # df.head() to print out the first few lines to give idea of the content
 
 import pandas as pd 
+import matplotlib.pyplot as plt
+import seaborn as sb
 
 # Split classes into different files
 
@@ -17,5 +19,8 @@ column_names = ['Sepal Length (cm)', 'Sepal Width (cm)', 'Petal Length (cm)', 'P
 
 iris_data_frame = pd.read_csv("../irisdata.csv", names = column_names)
 #iris_data_frame.columns = 
+sb.set_theme()
+sb.histplot(iris_data_frame['Sepal Length (cm)'])
+plt.show()
 
 print(iris_data_frame.describe())
