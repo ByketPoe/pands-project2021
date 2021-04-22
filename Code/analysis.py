@@ -18,9 +18,15 @@ import seaborn as sb
 column_names = ['Sepal Length (cm)', 'Sepal Width (cm)', 'Petal Length (cm)', 'Petal Width (cm)', 'Class']
 
 iris_data_frame = pd.read_csv("../irisdata.csv", names = column_names)
+setosa_df = iris_data_frame[iris_data_frame['Class'] == 'Iris-setosa']
+versicolor_df = iris_data_frame[iris_data_frame['Class'] == 'Iris-versicolor']
+virginica_df = iris_data_frame[iris_data_frame['Class'] == 'Iris-virginica']
 #iris_data_frame.columns = 
 sb.set_theme()
 sb.histplot(iris_data_frame['Sepal Length (cm)'])
 plt.show()
 
 print(iris_data_frame.describe())
+print(setosa_df.describe())
+print(versicolor_df.describe())
+print(virginica_df.describe())
