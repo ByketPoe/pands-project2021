@@ -20,7 +20,10 @@ Fisher’s Iris Data Set is a set of data that describes the dimensions of three
 
 ### Data Within the Dataset
 The data itself is comprised of 150 sets of measurements of two parts of the flowers, the petal and the sepal.
+<figure>
 <img src = 'iris_species.png' alt = 'Diagram of thre Iris Flowers species showing the petal and sepal'>
+<figcaption>Figure 1: Species of iris flower measured for the Iris Data set. The measurements were taken from the petal and sepal (labelled)</figcaption>
+</figure>
  There are five columns of data: four measurements and the species of iris the flower belongs to. The measurements are sepal length, sepal width, petal length and petal width. There are three species of iris in the dataset: setosa, versicolor and virginica. There are 50 measurements of each species of iris.
 <show head of data>
 
