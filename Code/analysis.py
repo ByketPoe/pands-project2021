@@ -29,7 +29,8 @@ p_length = iris_data_frame['petal_length']
 p_width = iris_data_frame['petal_width']
 #iris_data_frame.columns = 
 sb.set_theme()
-sb.histplot(iris_data_frame['sepal_length'])
+#sb.histplot(iris_data_frame['sepal_length'])
+sb.pairplot(iris_data_frame)
 plt.show()
 
 #print(iris_data_frame.describe())
