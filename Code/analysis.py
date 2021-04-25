@@ -1,5 +1,5 @@
 # analysis.py
-# The purpose of this program is to carry out analysis on the Iris Data Set and output the findings.
+# The purpose of this program is to carry out analysis on the Iris Data Set and output the findings as text and images.
 # author: Emma Farrell
 
 # When this gets run, the analysis gets carried out and outputted to a file + images
@@ -12,9 +12,7 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
 import seaborn as sb
-import sys 
-
-# Split classes into different files
+import file_i_o as f
 
 column_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
 
@@ -31,14 +29,16 @@ p_width = iris_data_frame['petal_width']
 #iris_data_frame.columns = 
 sb.set_theme()
 #sb.histplot(iris_data_frame['sepal_length'])
-sb.pairplot(iris_data_frame)
-plt.show()
+sb.pairplot(iris_data_frame, hue = 'class')
+#plt.show()
 
 #print(iris_data_frame.describe())
+print(iris_data_frame)
 #print(setosa_df.describe())
 #print(versicolor_df.describe())
 #print(virginica_df.describe())
 #print(s_length)
 #print(s_width)
-#rint(p_length)
-print(p_width.describe())
+#print(p_length)
+# print(p_width.describe())
+# print(f.check_file_exists('file.txt'))
