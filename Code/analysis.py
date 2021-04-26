@@ -27,13 +27,13 @@ s_width = iris_data_frame['sepal_width']
 p_length = iris_data_frame['petal_length']
 p_width = iris_data_frame['petal_width']
 #iris_data_frame.columns = 
-sb.set_theme()
+#sb.set_theme()
 #sb.histplot(iris_data_frame['sepal_length'])
-sb.pairplot(iris_data_frame, hue = 'class')
+#sb.pairplot(iris_data_frame, hue = 'class')
 #plt.show()
 
 #print(iris_data_frame.describe())
-print(iris_data_frame)
+#print(type(iris_data_frame))
 #print(setosa_df.describe())
 #print(versicolor_df.describe())
 #print(virginica_df.describe())
@@ -42,3 +42,12 @@ print(iris_data_frame)
 #print(p_length)
 # print(p_width.describe())
 # print(f.check_file_exists('file.txt'))
+output_file = 'analysis_output.txt'
+if not f.check_file_exists(output_file):
+    f.read_df_to_file(iris_data_frame.info(), output_file)
+
+#print(iris_data_frame.info().to_numpy())
+
+#print((str(iris_data_frame.info())))
+#print(type(iris_data_frame.describe()))
+#print(type(iris_data_frame.head()))

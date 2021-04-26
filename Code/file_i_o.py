@@ -6,7 +6,10 @@ import os
 def check_file_exists(file_path):
     return os.path.exists(file_path)
 
-#def read_df_to_file():
+def read_df_to_file(data_frame, filename):
+    with open(filename, "wt") as fn:
+        #fn.write(data_frame.describe())
+        fn.write(data_frame)
 
 
 #def save_fig():
