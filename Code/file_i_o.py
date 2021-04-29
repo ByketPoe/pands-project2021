@@ -6,6 +6,7 @@ import sys
 import numpy as np
 import pandas as pd
 import tabulate as t
+import matplotlib.pyplot as plt
 
 def check_file_exists(file_path):
     return os.path.exists(file_path)
@@ -63,4 +64,5 @@ def read_df_to_file(data_frame, title, col_headers, filename):
         #fn.write(data_frame)
 
 
-#def save_fig():
+def save_fig(fig_filename):
+    plt.savefig(fig_filename)

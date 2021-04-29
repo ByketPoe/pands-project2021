@@ -25,19 +25,46 @@ setosa_df = iris_data_frame[iris_data_frame['species'] == 'Iris-setosa']
 versicolor_df = iris_data_frame[iris_data_frame['species'] == 'Iris-versicolor']
 virginica_df = iris_data_frame[iris_data_frame['species'] == 'Iris-virginica']
 
-s_length = iris_data_frame['sepal_length']
+s_length = iris_data_frame[['sepal_length', 'species']]
 s_width = iris_data_frame['sepal_width']
 p_length = iris_data_frame['petal_length']
 p_width = iris_data_frame['petal_width']
-#iris_data_frame.columns = 
-#sb.set_theme()
-#sb.histplot(iris_data_frame['sepal_length'])
-#sb.pairplot(iris_data_frame, hue = 'class')
+
+sb.set_theme()
+
+slength_histplot_file = 'fig2_hist.png'
+swidth_histplot_file = 'fig3_hist.png'
+plength_histplot_file = 'fig4_hist.png'
+pwidth_histplot_file = 'fig5_hist.png'
+
+print(type(s_length))
+
+if not f.check_file_exists(slength_histplot_file):
+    sb.histplot(s_length)
+    f.save_fig(slength_histplot_file)
+
+# if not f.check_file_exists(swidth_histplot_file):
+#     sb.histplot(s_width)
+#     f.save_fig(slength_histplot_file)
+
+# if not f.check_file_exists(plength_histplot_file):
+#     sb.histplot(p_length)
+#     f.save_fig(slength_histplot_file)
+
+#if not f.check_file_exists(pwidth_histplot_file):
+    #sb.histplot(p_width)
+    #f.save_fig(slength_histplot_file)
+
+pairplot_file = 'fig1_pairplot.png'
+sb.pairplot(iris_data_frame, hue = 'species')
+if not f.check_file_exists(pairplot_file):
+    f.save_fig(pairplot_file)
 #plt.show()
 
 #print(iris_data_frame.describe())
 cols = iris_data_frame.columns
 summary_cols = ['value', 'sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+corr_cols = ['', 'sepal_length', 'sepal_width', 'petal_length', 'petal_width']
 #print(type(cols))
 #print(iris_data_frame.corr())
 #print(setosa_df.corr())
@@ -54,19 +81,23 @@ summary_cols = ['value', 'sepal_length', 'sepal_width', 'petal_length', 'petal_w
 # print(p_width.describe())
 # print(f.check_file_exists('file.txt'))
 output_file = 'analysis_output.txt'
+
 #f.read_df_to_file(iris_data_frame.info(buf = io.StringIO()), output_file) - doesn't work
 if not f.check_file_exists(output_file):
-    f.read_df_to_file(iris_data_frame.info(), 'Data Info (first five rows)', cols, output_file)
     f.read_df_to_file(iris_data_frame.head(), 'Data Sample (first five rows)', cols, output_file)
     f.read_df_to_file(iris_data_frame.describe(), 'Data Summary (all species)', summary_cols, output_file)
     f.read_df_to_file(setosa_df.describe(), 'Data Summary (Setosa)', summary_cols, output_file)
     f.read_df_to_file(versicolor_df.describe(), 'Data Summary (Versicolor)', summary_cols, output_file)
     f.read_df_to_file(virginica_df.describe(), 'Data Summary (Virginica)', summary_cols, output_file)
+    f.read_df_to_file(iris_data_frame.corr(), 'Variable Correlations (all species)', corr_cols, output_file)
+    f.read_df_to_file(setosa_df.corr(), 'Variable Correlations (Setosa)', corr_cols, output_file)
+    f.read_df_to_file(versicolor_df.corr(), 'Variable Correlations (Versicolor)', corr_cols, output_file)
+    f.read_df_to_file(virginica_df.corr(), 'Variable Correlations (Virginica)', corr_cols, output_file)
     #f.read_df_to_file(iris_data_frame.describe(), cols, output_file)
 
 #print(iris_data_frame.info().to_numpy())
 
-#print((iris_data_frame.info()))
+#print(type(iris_data_frame.info())) info is none type
 #print(type(iris_data_frame.describe()))
 #print(type(iris_data_frame.head()))
 
