@@ -1,10 +1,8 @@
 # file_i_o.py
 # The purpose of this program is to store functions relating to file input/output.
 # author: Emma Farrell
+
 import os
-import sys
-import numpy as np
-import pandas as pd
 import tabulate as t
 import matplotlib.pyplot as plt
 
