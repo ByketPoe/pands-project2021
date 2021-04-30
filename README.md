@@ -200,8 +200,50 @@ In conclusion, Python has some powerful tools that can be used to analyse and vi
 The iris data set is a useful set of data to begin performing analysis on using these methods, as most of the data is of the same type (measurements as opposed to features or categories) but it allows for some complexity with the different iris species coming into play in the calculations. 
 
 ## Further Study
-Some additional analysis that could be done on the data set would be to compare mins and maxes of the different species. Pandas has functionality to pivot dataframes to rearrange the data to categorise it in different ways. There are other methods of visualisation of the data, such as boxplots and bean plots. 
+Some additional analysis that could be done on the data set would be to compare mins and maxes of the different species. Pandas has functionality to pivot dataframes to rearrange the data to categorise it in different ways. There are other methods of visualisation of the data, such as boxplots and violin plots. 
 
 The iris data set is also used in training algorithms used in machine learning. 
 
 # References
+## Iris data set
+* File Source - 
+* Background - 
+* “The use of multiple measurements in taxonomic problems”
+* linear discriminant analysis
+
+## Libraries
+* Pandas 
+    * Module
+        * https://www.w3schools.com/python/pandas/default.asp
+        * https://pandas.pydata.org/
+    * DataFrames - https://realpython.com/pandas-dataframe/
+    * Reading CSV Files - https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/02_read_write.html
+    * Conditional Selection - https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html
+    * Rename Columns - https://cmdlinetips.com/2018/03/how-to-change-column-names-and-row-indexes-in-pandas
+    * Head - https://www.w3resource.com/pandas/dataframe/dataframe-head.php
+    * Corr (correlation) - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html
+    * Describe - https://www.geeksforgeeks.org/python-pandas-dataframe-describe-method/
+    * Pandas Max - https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.max.html 
+    * Pandas Min - https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.min.html
+    * Pandas Pivot - https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pivot.html
+* Seaborn 
+    * Plotting Histograms - https://seaborn.pydata.org/generated/seaborn.histplot.html#seaborn.histplot
+        * Using enumerate and subplotting - https://www.youtube.com/watch?v=4DnWYK88-E4&t=322s
+    * Plotting Pairplots - https://www.youtube.com/watch?v=6GUZXDef2U0 
+    * Box Plot - https://seaborn.pydata.org/generated/seaborn.boxplot.html
+    * Violin Plot - https://seaborn.pydata.org/generated/seaborn.violinplot.html
+* Matplotlib - https://matplotlib.org/stable/index.html
+    * Activate/set figure settings - https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html
+    * Save Figure - https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html
+* OS 
+    * Check if file exists - https://www.guru99.com/python-check-if-file-exists.html
+* Tabulate Module - https://pypi.org/project/tabulate/
+## Statistics
+* Correlation
+* Boxplots
+* Bean plots
+
+## Machine learning
+
+## Markdown
+* Markdown Guide - https://www.markdownguide.org/basic-syntax/ 
