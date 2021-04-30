@@ -29,8 +29,11 @@ Fisher’s Iris Data Set is a set of data that describes the dimensions of three
 The data itself is comprised of 150 sets of measurements of two components of the flowers, the petal and the sepal.
 <figure>
 <img src = 'iris_species.png' alt = 'Diagram of thre Iris Flowers species showing the petal and sepal'>
-<figcaption>Figure 1: Species of iris flower measured for the Iris Data set. The measurements were taken from the petal and sepal (labelled)</figcaption>
+<figcaption>Figure 1: Species of iris flower measured for the Iris Data set. The measurements were taken from the petal and sepal (labelled). Image obtained from: towardsdatascience.com.</figcaption>
 </figure>
+
+Full link for image in [References](#references) below. 
+
  There are five columns of data: four measurements and the species of iris the flower belongs to. The measurements are sepal length, sepal width, petal length and petal width. There are three species of iris in the dataset: setosa, versicolor and virginica. There are 50 measurements of each species of iris.
 
  Below is a view of the first five rows of the dataset: 
@@ -206,10 +209,11 @@ The iris data set is also used in training algorithms used in machine learning.
 
 # References
 ## Iris data set
-* File Source - 
-* Background - 
-* “The use of multiple measurements in taxonomic problems”
-* linear discriminant analysis
+* File Source - https://archive.ics.uci.edu/ml/datasets/iris 
+* Background 
+    * Info and image used - https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
+    * Info - https://en.wikipedia.org/wiki/Iris_flower_data_set 
+* Linear discriminant analysis - https://en.wikipedia.org/wiki/Linear_discriminant_analysis
 
 ## Libraries
 * Pandas 
@@ -238,12 +242,14 @@ The iris data set is also used in training algorithms used in machine learning.
 * OS 
     * Check if file exists - https://www.guru99.com/python-check-if-file-exists.html
 * Tabulate Module - https://pypi.org/project/tabulate/
+
 ## Statistics
-* Correlation
-* Boxplots
-* Bean plots
+* Correlation - https://en.wikipedia.org/wiki/Correlation_and_dependence
+* Boxplots - https://en.wikipedia.org/wiki/Box_plot
+* Violin Plots - https://en.wikipedia.org/wiki/Violin_plot
 
 ## Machine learning
+* Machine Learning with the Iris Data Set - https://youtu.be/hd1W4CyPX58
 
 ## Markdown
 * Markdown Guide - https://www.markdownguide.org/basic-syntax/ 
