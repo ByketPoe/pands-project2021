@@ -20,17 +20,17 @@ def check_file_exists(file_path):
 # It writes the dataframe to the text file with some added formatting at the beginning and end to separate out all of the tables in the file. 
 def read_df_to_file(data_frame, title, col_headers, filename):
     # title_border, title_dressing and footer are variables that store strings used create headers and footers for each table written to the text file. 
-    title_border = '======================================'
+    title_border = '=============================================='
     title_dressing = ' *** '
-    footer = '\\\\\\\\\========================================================/////'
+    footer = '\\\\\\\\\=============================================================/////'
     # The file is opened in append/text mode. Append mode ensures that previous text will not be overwritten. 
     with open(filename, 'at') as ft:
         # The header is formed using tabs, new lines, formatting strings created above and the title passed into the function. 
-        ft.write('\t\t\t')
+        ft.write('\t\t\t\t')
         ft.write(title_border + '\n')
-        ft.write('\t\t\t')
+        ft.write('\t\t\t\t')
         ft.write(title_dressing + title + title_dressing + '\n')
-        ft.write('\t\t\t')
+        ft.write('\t\t\t\t')
         ft.write(title_border + '\n\n')
         # The tabulate function from the tabulate module is used to write the dataframe passed into the function to the file in a tabulated format. 
         # The list of column names is passed into the argument headers. 
